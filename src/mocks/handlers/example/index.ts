@@ -13,15 +13,14 @@ interface Review {
 
 const getBookHandler = rest.get<null, Book>(
   'https://my.backend/book',
-  (req, res, ctx) => {
-    return res(
+  (req, res, ctx) =>
+    res(
       ctx.json({
         title: 'Lord of the Rings',
         description:
           'The Lord of the Rings is an epic high-fantasy novel written by English author and scholar J. R. R. Tolkien.',
       })
-    );
-  }
+    )
 );
 
 const getReviewsHandler = rest.get<null, [Review]>(

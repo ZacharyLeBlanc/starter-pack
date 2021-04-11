@@ -1,9 +1,9 @@
 module.exports = {
   testEnvironment: 'jsdom',
-  roots: ['<rootDir>/components'],
+  roots: ['<rootDir>/src'],
   preset: 'ts-jest',
   setupFilesAfterEnv: [
-    '<rootDir>/setupTests.ts',
+    '<rootDir>/src/setupTests.ts',
     '@testing-library/jest-dom/extend-expect',
   ],
   transform: {
@@ -22,7 +22,7 @@ module.exports = {
     // to transform jsx into js rather than leaving it jsx such as the next build requires. you
     // can see this setting in tsconfig.jest.json -> "jsx": "react"
     'ts-jest': {
-      tsConfig: '<rootDir>/tsconfig.jest.json',
+      tsconfig: '<rootDir>/tsconfig.jest.json',
     },
   },
 };
